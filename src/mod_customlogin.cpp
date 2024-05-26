@@ -353,7 +353,7 @@ public:
 
                 // Inform the player they have new items
                 std::ostringstream ss;
-                ss << "|cffFF8000[|cFFBDB76BCL|cffFF8000] The Owner has placed |cFFBDB76Ba surprise|cffFF8000 in your backpack!";
+                ss << "|cffFF8000[|cFFBDB76B系统提示|cffFF8000] 已在里你背包里放置了 |cFFBDB76B一份|cffFF8000 新手装备！";
                 ChatHandler(player->GetSession()).SendSysMessage(ss.str().c_str());
             }
 
@@ -466,7 +466,7 @@ public:
 
                 // Inform the player they have new skills
                 std::ostringstream ss;
-                ss << "|cffFF8000[|cFFBDB76BCL|cffFF8000] You have been granted |cFFBDB76Badditional weapon skills|cffFF8000.";
+                ss << "|cffFF8000[|cFFBDB76B系统提示|cffFF8000] 您已学会 |cFFBDB76B新的技能|cffFF8000。";
                 ChatHandler(player->GetSession()).SendSysMessage(ss.str().c_str());
             }
 
@@ -514,7 +514,7 @@ public:
 
                 // Inform the player they have new skills
                 std::ostringstream ss;
-                ss << "|cffFF8000[|cFFBDB76BCL|cffFF8000] Your spellbook has been scribed with |cFFBDB76Bspecial abilities|cffFF8000.";
+                ss << "|cffFF8000[|cFFBDB76B系统提示|cffFF8000] 您已学会 |cFFBDB76B新的技能|cffFF8000。";
                 ChatHandler(player->GetSession()).SendSysMessage(ss.str().c_str());
             }
 
@@ -548,7 +548,7 @@ public:
 
                 // Inform the player they have exalted reputations
                 std::ostringstream ss;
-                ss << "|cffFF8000[|cFFBDB76BCL|cffFF8000] Your are now |cFFBDB76BExalted|cffFF8000 with your faction's capital cities.";
+                ss << "|cffFF8000[|cFFBDB76B系统提示|cffFF8000] 您现在主城阵营的声望达到了 |cFFBDB76B崇拜|cffFF8000 。";
                 ChatHandler(player->GetSession()).SendSysMessage(ss.str().c_str());
             }
         }
@@ -566,13 +566,13 @@ public:
                 if (player->GetTeamId() == TEAM_ALLIANCE)
                 {
                     std::ostringstream ss;
-                    ss << "|cffFFFFFF[|cff2897FF Alliance |cffFFFFFF]:|cff4CFF00 " << player->GetName() << "|cffFFFFFF has come online.";
+                    ss << "|cffFFFFFF[|cff2897FF 联盟玩家 |cffFFFFFF]:|cff4CFF00 " << player->GetName() << "|cffFFFFFF 加入游戏。";
                     sWorld->SendServerMessage(SERVER_MSG_STRING, ss.str().c_str());
                 }
                 else
                 {
                     std::ostringstream ss;
-                    ss << "|cffFFFFFF[|cffFF0000 Horde |cffFFFFFF]:|cff4CFF00 " << player->GetName() << "|cffFFFFFF has come online.";
+                    ss << "|cffFFFFFF[|cffFF0000 部落玩家 |cffFFFFFF]:|cff4CFF00 " << player->GetName() << "|cffFFFFFF 加入游戏。";
                     sWorld->SendServerMessage(SERVER_MSG_STRING, ss.str().c_str());
                 }
             }
@@ -590,13 +590,13 @@ public:
                 if (player->GetTeamId() == TEAM_ALLIANCE)
                 {
                     std::ostringstream ss;
-                    ss << "|cffFFFFFF[|cff2897FF Alliance |cffFFFFFF]|cff4CFF00 " << player->GetName() << "|cffFFFFFF has left the game.";
+                    ss << "|cffFFFFFF[|cff2897FF 联盟玩家 |cffFFFFFF]|cff4CFF00 " << player->GetName() << "|cffFFFFFF 离开游戏。";
                     sWorld->SendServerMessage(SERVER_MSG_STRING, ss.str().c_str());
                 }
                 else
                 {
                     std::ostringstream ss;
-                    ss << "|cffFFFFFF[|cffFF0000 Horde |cffFFFFFF]|cff4CFF00 " << player->GetName() << "|cffFFFFFF has left the game.";
+                    ss << "|cffFFFFFF[|cffFF0000 部落玩家 |cffFFFFFF]|cff4CFF00 " << player->GetName() << "|cffFFFFFF 离开游戏。";
                     sWorld->SendServerMessage(SERVER_MSG_STRING, ss.str().c_str());
                 }
             }
